@@ -1,0 +1,43 @@
+.container {
+  position: absolute;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: #939393;
+}
+
+.input_view{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  margin-bottom:2rpx;
+  background:#fff;
+
+}
+.input_txt{
+  font-size: 28rpx;
+  color: #666;
+  width: 200rpx;
+  padding-left:40rpx;
+}
+.input_one{
+  font-size: 28rpx;
+  color: #333;
+  min-height: 80rpx;
+  width: 550rpx;
+}
+
+.save_address{
+  width: 90%;
+  left: 5%;
+  position: absolute;
+  bottom: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: red;
+  color: #fff;
+  border-radius: 8rpx;
+}

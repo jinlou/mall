@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="choose_addr">
+    <block wx:if="{{!address.id}}">
+      <image bindtap='chooseAddr' class="add_addr" src="../../images/add.png"></image>
+
+      <text class="add_title">请添加地址信息{{address.id}}</text>
+    </block>
+    <block wx:else>
+      <view class="has_addr">
+        <view class="addr_left">
+          <view class="addr_one">
+            <text>{{address.name}}</text>
+            <text>{{address.phone}}</text>
+          </view>
+          <view class="addr_two">
+            <text>{{address.province}}{{address.city}}{{address.county}} {{address.addr2}}</text>
+          </view>
+        </view>
+        <view class="addr_right">
+          <image bindtap='chooseAddr' src='../../images/icon-arrowdown.png'></image>
+        </view>
+      </view>
+
+    </block>
+  </view>
+</view>

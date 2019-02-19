@@ -1,0 +1,62 @@
+<view id='box' class="container">
+  <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{goodsDetail.imgs}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+  <view class='goods_info'>
+    <text class='goods_name'>{{goodsDetail.goodsName}}</text>
+    <view>
+      <text class='desc'>{{goodsDetail.desc}}</text>
+    </view>
+
+    <view class="goods_price">
+      <text class='price1'>￥{{goodsDetail.price1}}</text>
+      <text class='price2'>￥{{goodsDetail.price2}}</text>
+    </view>
+
+  </view>
+
+  <view class="input_all">
+    <view class="input_outter">
+      <text class="input_txt">已选</text>
+      <input placeholder='请选择' class="input1"></input>
+    </view>
+    <view class="input_outter">
+      <text class="input_txt">服务</text>
+      <input placeholder='请选择' class="input1" value="包邮，二十四小时发货"></input>
+    </view>
+  </view>
+
+  <view class="other_info">
+    <image src="{{goodsDetail.poster}}"></image>
+    <image src="{{goodsDetail.poster}}"></image>
+  </view>
+
+  <!-- <view class='boxtwo'>
+    <view class="boxtwo-tab-nav {{HomeIndex == 0 ?'on':''}}" bindtap="boxtwo" data-index="0">商品详情</view>
+    <view class="boxtwo-tab-nav {{HomeIndex == 1 ?'on':''}}" bindtap="boxtwo" data-index="1">产品参数
+    </view>
+
+    <view class="boxtwo-content" class='img_one'>
+      <view wx:if="{{HomeIndex == 0}}" wx:for="{{data.img}}" wx:for-item="img">
+        <image src='{{img.image}}' mode="{{img.mode}}" class='boxtwo_image'></image>
+        <text>{{img.name}}</text>
+      </view>
+      <view wx:if="{{HomeIndex == 1}}" class='product'>产品参数</view>
+    </view>
+  </view> -->
+
+  <view class='dibu'>
+    <view class='left'>
+      <text class='text' bindtap="addcart" data-id="{{goodsDetail.id}}">加入购物车</text>
+    </view>
+    <view class='right'>
+      <text class='text' bindtap="goPay" data-id="{{goodsDetail.id}}">立即购买</text>
+    </view>
+  </view>
+</view>

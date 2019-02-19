@@ -1,0 +1,50 @@
+<view class="container">
+  <view wx:if="hasGoods" class="allGoodsOutter">
+    <block wx:for="{{carts}}">
+      <view class="goodsItem">
+        <view class="goodsRadio">
+          <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+          <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+          <!-- <radio data-id="{{item.id}}" data-money="{{item.price1}}" bindtap="chooseGoods" data-choose="0"/> -->
+        </view>
+        <view class="goodsLeft">
+          <image src="{{item.src}}"></image>
+        </view>
+        <view class="goodsRight">
+          <view class="goodsName">
+            <text>{{item.goodsName}}</text>
+          </view>
+          <view class="desc">
+            <text>{{item.desc}}</text>
+          </view>
+
+          <view class="price">
+            <text class="price1">￥{{item.price1}}</text>
+            <view class="oparete_num">
+              <text bindtap="minusCount" data-index="{{index}}">-</text>
+              <input data-index="{{index}}" bindinput="bindReplaceInput" value="{{item.num}}" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}"
+              />
+              <text bindtap='addCount' data-index="{{index}}">+</text>
+            </view>
+            <image src="../../images/delete.png" class="delete_list" bindtap='deleteList' data-index="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+  <view wx:else>
+    <image src="{{cartImg}}" class="cart-image" />
+    <view>{{tipWords}}</view>
+  </view>
+
+  <view class="total">
+    <view class="all">
+      <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" class="allChoose" />
+      <icon wx:else type="circle" bindtap="selectAll" class="allChoose" />
+      <text class="totleMoney">{{totalPrice}}</text>
+    </view>
+
+    <view class="commitBtn">提交</view>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.choose_addr {
+  margin: 20rpx;
+  height: 200rpx;
+  border: 2rpx dashed #666;
+  padding: 10rpx 20rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.add_addr {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.add_title {
+  font-size: 28rpx;
+  display: block;
+  text-align: center;
+}
+
+.addr_one {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #333;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #999;
+}
+
+.addr_two {
+  color: #333;
+  font-size: 28rpx;
+  text-align: left;
+  height: 100rpx;
+  display: table;
+}
+
+.addr_two text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.has_addr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addr_left {
+  width: 580rpx;
+}
+
+.addr_right {
+  width: 100rpx;
+  height: 220rpx;
+  line-height: 220rpx;
+  background: red;
+  margin: -10rpx -20rpx;
+}
+
+.addr_right image{
+  width: 50rpx;
+  height: 50rpx;
+}

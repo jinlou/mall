@@ -1,0 +1,35 @@
+/**app.wxss**/
+@import "./style/layout.wxss";
+
+.container {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: red;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.noMore {
+  text-align: center;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}

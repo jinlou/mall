@@ -1,0 +1,229 @@
+.container .cart-image {
+  width: 120px;
+  height: 120px;
+}
+
+.container {
+  position: absolute;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: #939393;
+}
+
+.goodsRadio {
+  position: absolute;
+  width: 100rpx;
+  /* height:200rpx; */
+  top: 64rpx;
+  left: 20rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+}
+
+.goodsRadio radio {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.classification {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.classification image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.allClassificate1 {
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  padding: 0 100rpx;
+  z-index: 2;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border-top: 2px solid #e6e6e6;
+}
+
+.allClassificateItem {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.goodsItem {
+  /* display: flex; */
+  padding-left: 100rpx;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 2rpx;
+  background: #fff;
+}
+
+.goodsLeft {
+  width: 160rpx;
+  height: 200rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+}
+
+.goodsLeft image {
+  width: 100%;
+  height: 100%;
+  /* width: 160rpx;
+  height: 160rpx;
+  display: inline-block; */
+}
+
+.goodsRight {
+  display: inline-block;
+  flex-direction: column;
+  height: 200rpx;
+  width: 490rpx;
+  padding: 3px 5px;
+  box-sizing: border-box;
+}
+
+.goodsName {
+  color: #333;
+  font-size: 32rpx;
+  height: 90rpx;
+}
+
+.desc {
+  color: #999;
+  font-size: 28rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  height: 54rpx;
+  line-height: 54rpx;
+}
+
+.price1 {
+  color: #333;
+  font-size: 32rpx;
+}
+
+.price2 {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.ntegral {
+  color: red;
+  font-size: 32rpx;
+}
+
+.justSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.allGoodsOutter {
+  padding-bottom: 88rpx;
+}
+
+.total {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+
+.all {
+  position: relative;
+  padding-left: 100rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.all icon {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+}
+
+.all icon:after {
+  content: '全选';
+}
+
+.allChoose:after {
+  content: '全选';
+  margin-right: 50rpx;
+  color: #666;
+}
+
+.commitBtn {
+  width: 200rpx;
+  background: red;
+  color: #fff;
+  text-align: center;
+}
+
+.totleMoney:before {
+  content: '总计：';
+  color: #666;
+}
+
+.totleMoney {
+  color: red;
+}
+
+.checkbox {
+  border-radius: 15rpx;
+}
+
+.oparete_num {
+  display: flex;
+}
+
+.oparete_num text {
+  border: 1px solid #939393;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.oparete_num input {
+  width: 70rpx;
+  height: 40rpx;
+  border: 1px solid #939393;
+  min-height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  padding: 0;
+}
+
+.delete_list {
+  width: 40rpx;
+  height: 40rpx;
+}

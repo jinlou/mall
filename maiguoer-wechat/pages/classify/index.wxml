@@ -1,0 +1,91 @@
+<scroll-view class="container" lower-threshold="50" bindscrolltolower="getMore" scroll-y>
+  <view class="input_outter">
+    <image src="../../images/search.png"></image>
+    <input placeholder='搜索商品'></input>
+  </view>
+  <view class="classification">
+    <view class="classification1">
+      <text>精选</text>
+      <image data-choose="allClassificate" bindtap="allClassificate" src="{{allClassificate1?'../../images/low_j.png':'../../images/up_j.png'}}"></image>
+    </view>
+    <view class="classification1">
+      <text>价格</text>
+      <image data-choose="priceSort" bindtap="priceSort" src="{{priceSort?'../../images/up_j.png':'../../images/low_j.png'}}"></image>
+    </view>
+    <view class="classification1">
+      <text>销量</text>
+      <image data-choose="amountSort" bindtap="amountSort" src="{{amountSort?'../../images/up_j.png':'../../images/low_j.png'}}"></image>
+    </view>
+    <view class="allClassificate1" wx:if='{{!allClassificate1}}'>
+      <block wx:for="{{allClassificateArr}}">
+        <view class="allClassificateItem" bindtap="chooseOne" data-id="{{item.id}}">
+          <text>{{item.classificateName}}</text>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <!-- 商品 -->
+  <view wx:if="hasGoods">
+    <block wx:for="{{allGoods}}">
+      <navigator url="../details/index?id={{item.id}}">
+        <view class="goodsItem">
+          <view class="goodsLeft">
+            <image src="{{item.src}}"></image>
+          </view>
+          <view class="goodsRight">
+            <!-- <view class="justSpace"> -->
+            <view class="goodsName">
+              <text>{{item.goodsName}}</text>
+            </view>
+            <view class="desc">
+              <text>{{item.desc}}</text>
+            </view>
+
+            <view class="price">
+              <text class="price1">￥{{item.price1}}</text>
+              <text class="price2">￥{{item.price2}}</text>
+              <text class="ntegral">积分：{{item.ntegral}}</text>
+            </view>
+          </view>
+
+          <!-- </view> -->
+        </view>
+
+      </navigator>
+
+    </block>
+  </view>
+  <view wx:else>没有商品，哈哈哈！</view>
+  <!-- <view class="nav_left">
+    <block wx:for="{{navLeftItems}}">
+      <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.tree.desc}}</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+      <block wx:for="{{navRightItems[curIndex].tree.nodes[1].tree.nodes}}">
+        <view class="nav_right_items">
+          <navigator url="../list/index?brand={{item.tree.id}}&typeid={{navRightItems[curIndex].id}}">
+            <view>
+              <block wx:if="{{item.tree.logo}}">
+                <image src="{{item.tree.logo}}"></image>
+              </block>
+              <block wx:else>
+                <image src="http://temp.im/50x30"></image>
+              </block>
+            </view>
+            <view wx:if="{{item.tree.desc}}">
+              <text>{{item.tree.desc}}</text>
+            </view>
+            <view wx:else>
+              <text>{{item.tree.desc2}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view> -->
+</scroll-view>

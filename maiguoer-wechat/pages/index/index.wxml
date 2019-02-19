@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<scroll-view class="container" lower-threshold="50" bindscrolltolower="getMore" scroll-y>
+  <view>
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+      <block wx:for="{{images}}">
+        <swiper-item>
+          <image data-id="{{item.id}}" src="{{item.src}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- <view class="text">
+    <view class="line_flag"></view>
+    <text>第一层</text>
+  </view>
+
+  <view class="venues_box">
+    <view class="venues_list">
+      <block wx:for="{{venuesItems}}">
+        <view class="venues_item">
+          <navigator url="../brand/index?id={{item.id}}">
+            <image src="{{item.src}}" />
+            <view class="venues_name">{{item.goodsName}}</view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view> -->
+
+  <view class="text">
+    <view class="line_flag"></view>
+    <text>第二层</text>
+  </view>
+
+  <view class="choice_box">
+    <view class="choice_list">
+      <block wx:for="{{choiceItems}}">
+        <navigator url="../details/index?id={{item.id}}">
+          <view class="choice_item">
+            <image src="{{item.src}}" />
+            <view class="title">
+              <view class="title_goods_name">{{item.goodsName}}</view>
+              <view class="title_ntegral">积分：{{item.ntegral}}</view>
+              <view class="title_price">￥{{item.price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
+
+  <view wx:if='noMore' class="noMore">------我是有底线的，别拉了------</view>
+
+</scroll-view>

@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="all_type">
+    <text bindtap='changeType' data-type='0' class="{{borderRed==0?'border_red':''}}">全  部</text>
+    <text bindtap='changeType' data-type='1' class="{{borderRed==1?'border_red':''}}">待付款</text>
+    <text bindtap='changeType' data-type='2' class="{{borderRed==2?'border_red':''}}">待发货</text>
+    <text bindtap='changeType' data-type='3' class="{{borderRed==3?'border_red':''}}">待收货</text>
+    <text bindtap='changeType' data-type='4' class="{{borderRed==4?'border_red':''}}">售  后</text>
+  </view>
+  <view wx:if="hasGoods" class="allGoodsOutter">
+    <block wx:for="{{order}}">
+      <view class="item">
+        <view class="item_one">
+          <text>订单号:{{item.orderNum}}</text>
+          <text wx:if="{{item.status == 1}}">已发货</text>
+          <text wx:elif="{{item.status == 2}}">待发货</text>
+          <text wx:elif="{{item.status == 3}}">已收货</text>
+          <text wx:else>已完成</text>
+        </view>
+        <view class="item_two">
+          <view class="goods_img">
+            <image src="{{item.goodsDetail.src}}"></image>
+          </view>
+          <view class="goods_detail">
+            <view class="goods_name">
+              <text>{{item.goodsDetail.goodsName}}</text>
+            </view>
+            <view class="goods_desc">
+              <text>{{item.goodsDetail.desc}}</text>
+            </view>
+            <view class="goods_price">
+              <text>￥{{item.goodsDetail.price1}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="item_three">
+          <text>合计：￥{{item.goodsDetail.price1}}</text>
+          <text wx:if="{{item.status == 1}}">物流跟踪</text>
+          <text wx:elif="{{item.status == 2}}">确认收货</text>
+          <text wx:elif="{{item.status == 3}}">完成</text>
+          <text wx:else>去评价</text>
+        </view>
+      </view>
+
+
+    </block>
+  </view>
+  <view wx:else>
+    <image src="{{cartImg}}" class="cart-image" />
+    <view>{{tipWords}}</view>
+  </view>
+
+</view>

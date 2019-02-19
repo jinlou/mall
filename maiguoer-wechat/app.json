@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/cart/index",
+    "pages/my/index",
+    "pages/details/index",
+    "pages/brand/index",
+    "pages/list/index",
+    "pages/address/index",
+    "pages/address_edit/index",
+    "pages/order/index",
+    "pages/pay/index",
+    "pages/login/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "脉果儿",
+    "navigationBarBackgroundColor": "#8c3fd9",
+    "backgroundColor": "#F2f2f2",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#5700A0",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "backgroundColor": "#8c3fd9",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home_c.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/classify/index",
+      "iconPath": "images/type.png",
+      "selectedIconPath": "images/type_c.png",
+      "text": "分类"
+    }, {
+      "pagePath": "pages/cart/index",
+      "iconPath": "images/card.png",
+      "selectedIconPath": "images/card_c.png",
+      "text": "购物车"
+    }, {
+      "pagePath": "pages/my/index",
+      "iconPath": "images/mine.png",
+      "selectedIconPath": "images/mine_c.png",
+      "text": "我的"
+    }]
+  },
+  "debug": true
+}
